@@ -28,12 +28,12 @@ def pubmedid2info(list):
         SITE.append(site["content"].replace(' ',''))
         author = soup.find("meta",{"name":"citation_authors"})
         AUTHOR.append(author["content"].replace(' ',''))        
-        wb = workbook.Workbook()
-        ws = wb.active
-        ws.append(['DOI号','摘要','期刊','标题','网址','作者'])
-        for i in range(len(JU)):
-                ws.append([DOI[i],DES[i],JU[i],TITLE[i],SITE[i],AUTHOR[i]])
-        wb.save("test.xlsx")
+    wb = workbook.Workbook()
+    ws = wb.active
+    ws.append(['DOI号','摘要','期刊','标题','网址','作者'])
+    for i in range(len(JU)):
+        ws.append([DOI[i],DES[i],JU[i],TITLE[i],SITE[i],AUTHOR[i]])
+    wb.save("test.xlsx")
 
 """测试输入"""
 pubmedid = ["26735580","25581428"]

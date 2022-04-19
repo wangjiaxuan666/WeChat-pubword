@@ -5,7 +5,7 @@ import argparse
 parser  = argparse.ArgumentParser(description="Extract the paired read from the PE platfrom reads")
 parser.add_argument("--read1","-1",help="the read1 file")
 parser.add_argument("--read2","-2",help="the read2 file")
-parser.add_argument("--pattern","-p",help="the python re module regrex expression which distinguish two read file like @read29299[.1] and @read29299[.2], then the paremeter should be '\.\[1-2]$',the default value is noting to replace")
+parser.add_argument("--pattern","-p",help="the python re module regrex expression which distinguish two read file like @read29299[.1] and @read29299[.2], then the paremeter should be '\.[1-2]$',the default value is noting to replace")
 args = parser.parse_args()
 file1 = args.read1
 file2 = args.read2
